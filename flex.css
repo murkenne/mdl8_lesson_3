@@ -117,7 +117,7 @@ h1 {
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
 }
 
 .card img {
@@ -128,7 +128,7 @@ h1 {
 }
 
 .card img:hover {
-    transform: scale(1.1);
+    transform: scale(.5);
 }
 
 .card h2 {
@@ -290,6 +290,39 @@ footer {
 .footer-section nav li {
   list-style-type: none;
   margin: 0 10px;
+}
+
+
+button {
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 50%;
+  height: 20%;
+  background-color: goldenrod;
+  border: solid 5px #333;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+  transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.card-a button:hover {
+  color: #1100ff; /* Change text color on hover */
+  box-shadow: 0 2px 4px 8px;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.card button:hover {
+  color: #ff0000; /* Change text color on hover */
+  box-shadow: 0 2px 4px 8px;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+/* Optional for focus styling */ 
+button:focus {
+  outline: none;
 }
 
 

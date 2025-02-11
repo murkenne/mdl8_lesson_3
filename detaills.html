@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Details</title>
+  <link rel="stylesheet" href="flex.css">
+</head>
+<body>
+  <div id="details-container">
+    <!-- Character details will be dynamically loaded here -->
+  </div>
+  <script type="module">
+    import { showDetails } from "./components/characters.js";
+
+    // Get the character name from the URL
+    const params = new URLSearchParams(window.location.search);
+    const characterName = params.get("name");
+
+    // Display the character's details
+    if (characterName) {
+      showDetails(characterName);
+    } else {
+      const detailsContainer = document.getElementById("details-container");
+      detailsContainer.innerHTML = `
+        <p>Character not found.</p>
+        <a href="index.html">Back to List</a>
+      `;
+    }
+  </script>
+</body>
+</html>
